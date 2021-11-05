@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function game() {
+            for (let i=0;i<5;i++) {
+       // let paper = 1;
+       // let rock = 2;
+       // let scissors = 3;
+        const playerSelection = playerChoice();
+        const computerSelection = computerChoice();
+        let playerPoints = 0;
+        let computerPoints = 0;
+        
+       
+        function playerChoice() {
+            let playerSelection = prompt("What is your weapon of choice: Rock, Paper, Scissors?");
+            return playerSelection.toLowerCase();
+        }
+
+
+        /*function computerChoice() {
+            let computerSelection = (Math.random())
+            if (computerSelection <= 0.33) {
+            return "paper";
+            } else if (computerSelection <= 0.66) {
+                return "rock";
+            }
+            else {
+                return "scissors"
+            }
+        }*/
+
+
+        function computerChoice() {
+            let computerSelection = (Math.random() * 3);
+            if (computerSelection <= 1) {
+            return "paper";
+        } else if(computerSelection <= 2) {
+            return "rock";
+        } else {
+            return "scissors";
+        }
+    }
+
+
+    
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection === "paper" && computerSelection === "paper") {
+            return "It is a tie";
+        } else if (playerSelection === "paper" && computerSelection === "rock") {
+            playerPoints++
+            return "You win";
+        } else if(playerSelection === "paper" && computerSelection === "scissors") {
+            computerPoints++
+            return "You lose";
+        } else if (playerSelection === "rock" && computerSelection === "paper") {
+            computerPoints++
+            return "You lose";
+        } else if (playerSelection === "rock" && computerSelection === "rock") {
+            return "It is a tie";
+        } else if (playerSelection === "rock" && computerSelection === "scissors") {
+            playerPoints++
+            return "You win";
+        } else if (playerSelection === "scissors" && computerSelection === "paper") {
+            playerPoints++
+            return "You win";
+        } else if (playerSelection === "scissors" && computerSelection === "rock") {
+            computerPoints++
+            return "You lose";
+        } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+            return "It is a tie";
+        } else {
+            return "Something went wrong";
+        }
+    }
+
+    console.log(playRound(playerSelection, computerSelection));
+
+
+    
+        console.log("Player: " +playerPoints);
+        console.log("Computer: " +computerPoints);
+    
+    }
+}   
+console.log(game());
+
+
+
+
+
+
+    /*function game() {
+        for (let i=1;i<5;i++) {
+            playerChoice()
+            computerChoice()
+            if (playRound(playerSelection, computerSelection) === "You lose") {
+            alert("Computer " +computerPoints);
+            } else if (playRound(playerSelection, computerSelection) === "You win") {
+            alert("Player " +playerPoints);
+            }
+        }
+    }
+
+    console.log(game());*/
+
+
+    /*function game() {
+        for (let i=1;i<5;i++) {
+            playerChoice();
+            computerChoice();
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Player: " +playerPoints);
+            console.log("Computer: " +computerPoints);
+        }
+    }
+
+    console.log(game());*/
+
+
+
+    /*function game() {
+           console.log(playRound(playerSelection, computerSelection));
+           console.log("Player: " +playerPoints);
+           console.log("Computer: " +computerPoints);
+           console.log(playRound(playerSelection, computerSelection));
+           console.log("Player: " +playerPoints);
+           console.log("Computer: " +computerPoints);
+           console.log(playRound(playerSelection, computerSelection));
+           console.log("Player: " +playerPoints);
+           console.log("Computer: " +computerPoints);
+           console.log(playRound(playerSelection, computerSelection));
+           console.log("Player: " +playerPoints);
+           console.log("Computer: " +computerPoints);
+           console.log(playRound(playerSelection, computerSelection));
+           console.log("Player: " +playerPoints);
+           console.log("Computer: " +computerPoints);
+           
+    }
+
+    console.log(game());*/
+
+
+
+    //playRound(playerSelection, computerSelection);
+
+
+   /*function playRound() {
+        if (playerChoice === "paper") {
+            if (computerChoice === "paper") {
+                return "It is a Tie"
+            } else if (computerChoice === "rock") {
+                return "You Won"
+            } else {
+                return "You Lost"
+            }
+        } else {
+            return "So what?"
+        }
+    }*/
+
+
+    //The one below is the closest one so far
+
+     /*function playRound(playerSelection, compChoice) {
+        if (playerSelection === compChoice) {
+            return "It is a tie";
+        } else if (playerSelection <= compChoice) {
+            return "You lose";
+        } else {
+            return "You win";
+        }
+    }*/
+
+
+     /*function playRound () {
+        if (playerChoice === "paper") {
+            if (computerChoice === "rock") {
+            return "You win! Paper beats Rock";
+            } else {
+            return "You lost";
+            }
+        }
+    }*/
+
+    /*function playRound () {
+        if (playerChoice == paper) {
+            if (computerChoice == Scissors) {
+            return "You lost";
+        } else {
+            return "Tie";
+        }
+    } else {
+        return "Wateva"
+    }
+}*/
+    
+     /*function playRound() {   
+          if (playerChoice === "rock") {
+             if (computerChoice === "paper") {
+                  return "Lost";
+             }
+             else if (computerChoice === "scissors") {
+                 return "Won";
+             }
+             else {
+                 return "Draw";
+             }
+          } else if (playerChoice === "paper") {
+              if (computerChoice === "paper") {
+                  return "Draw";
+              } else if (computerChoice === "rock") {
+                  return "Won";
+              } else {
+                  return "Lost";
+              }
+          } else if (playerChoice === "scissors") {
+              if (computerChoice === "rock") {
+                  return "Lost";
+              } else if (computerChoice === "paper") {
+                  return "Won";
+              } else {
+                  return "Draw";
+              }
+          }
+     }*/
+
+     /*function playRound() {
+        if (playerChoice === "+ playerSelection +" && computerChoice === "+ compChoice +") {
+            return "It is a tie"
+        } else if (playerChoice === "+ playerSelection +" && computerChoice === "+ compChoice +") {
+            return "You lose"
+        } else {
+            return "You win"
+        }
+    }*/
+
+    /*function playRound() {
+        if (playerChoice === "paper" && computerChoice <= 1) {
+            return "It is a tie"
+        } else if (playerChoice === "paper" && computerChoice <= 2) {
+            return "You lose"
+        } else {
+            return "You win"
+        }
+    }*/
+
+
+    /*function playRound(playerSelection, compChoice) {
+        if (playerSelection <=1 && compChoice <= 1) {
+            return "It is a tie"
+        } else if (playerSelection <= 1 && compChoice <= 2) {
+            return "You lose"
+        } else {
+            return "You win"
+        }
+    }*/
+
+
+   /* function playRound(playerSelection, computerSelection) {  
+  if (playerSelection == 'rock') {
+    if (computerSelection == 'scissors') {
+      return 'wins';
+    } else if (computerSelection == 'paper') {
+      return 'loses';
+    } else {
+      return 'ties';
+    } 
+  }
+  if (playerSelection == 'paper') {
+    if (computerSelection == 'rock') {
+      return 'wins';
+    } else if (computerSelection == 'scissors') {
+      return 'loses';
+    } else {
+      return 'ties';
+    } 
+  }
+  if (playerSelection == 'scissors') {
+    if (computerSelection == 'rock') {
+      return 'loses';
+    } else if (computerSelection == 'paper') {
+      return 'wins';
+    } else {
+      return 'ties';
+    } 
+  }
+}*/
+
+
+
+/*function playRound (playerSelection, compChoice) {
+    if (playerSelection === "paper") {
+        if (compChoice === "paper") {
+        return "It is a tie"}
+    } else if (playerSelection === "paper") {
+        if (compChoice === "rock") {
+        return "You win"}
+    } else if (playerSelection === "paper"){
+        if (compChoice === "scissors") {
+        return "You lost"}
+    } 
+}*/
+        
+        </script>
+        
+        
+
+</body>
+</html>
